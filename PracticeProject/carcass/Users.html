@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" href="http://cdn.webix.com/edge/webix.css" type="text/css">
+    <script src="http://cdn.webix.com/edge/webix.js" type="text/javascript"></script>
+</head>
+<body>
+<script type="text/javascript" charset="utf-8">
+    webix.ready( function () {
+        webix.ui({
+            rows:[
+                { view:"toolbar", height: 50, elements:[
+                        { view:"label", label:"Some Name"},
+                        {},
+                        { view:"button", label:"Log Out", width: 100 }
+                    ]},
+                { view:"toolbar", height: 42, elements:[
+                        { view:"label", label:"Users"},
+                        {view:"button", label:"+", width: 40},
+                        {view:"button", label:"-", width: 40},
+                        {view:"button", label:"Edit", width: 40}
+                    ]},
+                { view: "datatable",  select: "row",
+                    columns:[
+                        {id: "login",      header:"Login", fillspace: 1},
+                        {id: "firstname",  header:"First Name", fillspace: 1},
+                        {id: "lastname",   header:"Last Name", fillspace: 1},
+                        {id: "email",      header:"Email", fillspace: 1},
+                        {id: "role",       header:"Role", fillspace: 1},
+                        {id: "registered", header:"Registration Date", fillspace: 1},
+                        {id: "lastonline", header:"Seen last", fillspace: 1},
+                        {id: "password",   header:"Password", fillspace: 1},
+                    ],
+                    data:[
+                        {id:1, login:"bradwoto", firstname:"Brad", lastname:"One", email: "bradwoto@a.oh", role:"user",
+                            registered: "17.12.2018", lastonline: "2h ago", password:"1234***"},
+                        {id:2, login:"brad222",  firstname:"Brad", lastname:"Two", email: "bradtwo@p.dp", role:"user",
+                            registered: "10.12.2018", lastonline: "10.12.2018", password:"4321***"},
+                        {id:3, login:"fcjc",  firstname:"Jack", lastname:"Carver", email: "jackcc@gmail.com", role:"admin",
+                            registered: "05.02.2017", lastonline: "Right Now", password:"4*3*1*2"},
+
+                    ]
+
+                }
+            ]
+        })
+    })
+</script>
+</body>
+</html>
